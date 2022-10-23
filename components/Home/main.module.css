@@ -1,0 +1,31 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  min-height: 500px;
+  height: 100vh;
+  max-height: 580px;
+  box-sizing: border-box;
+  padding: 48px 48px 32px;
+  overflow: hidden;
+  -webkit-transform: skewY(8deg);
+  transform: skewY(8deg);
+  -webkit-transform-origin: 100%;
+  transform-origin: 100%;
+  z-index: -1;
+  margin-top: -80px;
+}
+.background {
+  background-color: #1976d2 !important;
+  background: linear-gradient(145deg, #0d47a1, #42a5f5);
+  color: #fff;
+}
+
+.cardDesign {
+  box-shadow: 8px 12px 40px -19px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 8px 12px 40px -19px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 8px 12px 40px -19px rgba(0, 0, 0, 0.52);
+}
