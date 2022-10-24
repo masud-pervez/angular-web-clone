@@ -31,8 +31,8 @@ export default function MainCard() {
             },
           }}
         >
-          <Card sx={{ maxWidth: "auto" }}>
-            <CardActionArea sx={{ display: "flex", padding: "1rem" }}>
+          <Card sx={{ maxWidth: "auto" , boxShadow:"none", borderRadius: "10px"}}>
+            <CardActionArea sx={{ display: "flex", padding: "1rem",borderRadius: "10px" }}>
               <Image src={logo} height={150} alt="" />
               <CardContent>
                 <Typography

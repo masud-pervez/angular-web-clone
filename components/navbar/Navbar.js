@@ -2,10 +2,9 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import logo from "../assets/logo-nav@2x.png";
+import logo from "../../assets/logo-nav@2x.png";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import { Divider, IconButton, InputBase } from "@mui/material";
@@ -71,11 +70,6 @@ const pages = [
     id: 3,
     name: "RESOURCES",
     path: "/resources",
-  },
-  {
-    id: 4,
-    name: "EVENTS",
-    path: "/events",
   }
 ];
 

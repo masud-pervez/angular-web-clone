@@ -1,15 +1,15 @@
-import { Typography } from "@mui/material";
-import { dark } from "@mui/material/styles/createPalette";
-import { Container } from "@mui/system";
+import { Grid, Typography } from "@mui/material";
 import React from "react";
 
 export default function index() {
   return (
-    <div style={{ height: "100vh" }}>
-      <div
+    <Grid container height={"100vh"} justifyContent="start">
+      <Grid
+        item
         style={{
           backgroundColor: "#1e88e5",
           marginTop: "64px",
+          width: "100%",
         }}
       >
         <Typography
@@ -20,10 +20,7 @@ export default function index() {
         >
           EVENTS
         </Typography>
-      </div>
-
-
-
-    </div>
+      </Grid>
+    </Grid>
   );
 }
