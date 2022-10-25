@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import {
   Box,
   Card,
@@ -6,6 +7,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+import * as React from "react";
 import { useState } from "react";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
@@ -26,7 +28,7 @@ export default function index() {
         item
         style={{
           backgroundColor: "#1e88e5",
-          marginTop: "60px",
+          marginTop: "64px",
           width: "100%",
         }}
       >
@@ -90,7 +92,7 @@ export default function index() {
                                 sx={{
                                   ":hover": {
                                     boxShadow:
-                                      "-6px 5px 20px 0px rgba(55,154,224,0.75)",
+                                      "2px 5px 20px 0px rgba(55,154,224,0.75)",
                                   },
                                   transition: "all 0.3s",
                                   marginBottom: "10px"

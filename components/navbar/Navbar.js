@@ -8,11 +8,13 @@ import logo from "../../assets/logo-nav@2x.png";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import { Divider, IconButton, InputBase } from "@mui/material";
-
+import { useTheme } from "@mui/material/styles";
+// icons
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import LightModeIcon from "@mui/icons-material/LightMode";
 
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -70,12 +72,14 @@ const pages = [
     id: 3,
     name: "RESOURCES",
     path: "/resources",
-  }
+  },
 ];
 
-function Navbar() {
+function Navbar({ ColorModeContext }) {
   const router = useRouter();
+  const theme = useTheme();
   const { pathname } = router;
+  const colorMode = React.useContext(ColorModeContext);
 
   return (
     <nav>
@@ -160,8 +164,13 @@ function Navbar() {
                 color="inherit"
                 aria-label="dark-mode"
                 sx={{ mx: 1 }}
+                onClick={colorMode.toggleColorMode}
               >
-                <DarkModeIcon />
+                {theme.palette.mode === "dark" ? (
+                  <LightModeIcon />
+                ) : (
+                  <DarkModeIcon />
+                )}
               </IconButton>
             </Box>
             <Box sx={{ flexGrow: 0, display: { xs: "block", md: "flex" } }}>

@@ -6,7 +6,7 @@
   position: absolute;
   width: 100%;
   min-height: 500px;
-  height: 100vh;
+  height: 80vh;
   max-height: 580px;
   box-sizing: border-box;
   padding: 48px 48px 32px;
@@ -28,4 +28,12 @@
   box-shadow: 8px 12px 40px -19px rgba(0, 0, 0, 0.52);
   -webkit-box-shadow: 8px 12px 40px -19px rgba(0, 0, 0, 0.52);
   -moz-box-shadow: 8px 12px 40px -19px rgba(0, 0, 0, 0.52);
+}
+
+
+@media only screen and (max-width: 600px){
+  .hero {
+    -webkit-transform: skewY(0deg);
+    transform: skewY(0deg);
+  }
 }

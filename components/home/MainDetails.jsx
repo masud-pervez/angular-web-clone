@@ -17,10 +17,10 @@ export default function MainDetails() {
           justifyContent="center"
           spacing={2}
         >
-          <Grid alignContent="start" item lg={5} md={6} xs={6}>
+          <Grid alignContent="start" item lg={5} md={6} xs={10}>
             <Image height={500} src={logo1} alt="" />
           </Grid>
-          <Grid item  alignContent="center" lg={5} md={6} xs={7} sx={{display: {xs: {textAlign: "center"}}}}>
+          <Grid item  alignContent="center" lg={5} md={6} xs={10} sx={{display: {xs: {textAlign: "center"}}}}>
             <Typography variant="h5" component="h6" color="primary">
               DEVELOP ACROSS ALL PLATFORMS
             </Typography>
@@ -47,7 +47,7 @@ export default function MainDetails() {
           justifyContent="center"
           spacing={2}
         >
-          <Grid item lg={5} md={6} xs={7}>
+          <Grid item lg={5} md={6} xs={10}>
             <Typography variant="h5" component="h6" color="primary">
               DEVELOP ACROSS ALL PLATFORMS
             </Typography>
@@ -71,7 +71,7 @@ export default function MainDetails() {
               another push-model.
             </Typography>
           </Grid>
-          <Grid item lg={5} xs={12}>
+          <Grid item lg={5} xs={10}>
             <Image height={500} src={speedImage} alt="" />
           </Grid>
         </Grid>
@@ -87,10 +87,10 @@ export default function MainDetails() {
           justifyContent="center"
           spacing={2}
         >
-          <Grid item lg={5} xs={12}>
-            <Image height={200} width={400} src={toolingImge} alt="" />
+          <Grid item lg={5} xs={10}>
+            <Image height={600}  src={toolingImge} alt="" />
           </Grid>
-          <Grid item lg={5} xs={12}>
+          <Grid item lg={5} xs={10}>
             <Typography variant="h5" component="h6" color="primary">
               DEVELOP ACROSS ALL PLATFORMS
             </Typography>
@@ -127,7 +127,7 @@ export default function MainDetails() {
           justifyContent="center"
           spacing={2}
         >
-          <Grid item lg={5} xs={12}>
+          <Grid item lg={5} xs={10}>
             <Typography variant="h5" component="h6" color="primary">
               DEVELOP ACROSS ALL PLATFORMS
             </Typography>
@@ -151,9 +151,9 @@ export default function MainDetails() {
               another push-model.
             </Typography>
           </Grid>
-          <Grid item lg={5} xs={12}>
+          <Grid item lg={5} xs={10}>
             <Image
-              style={{ height: "60%", width: "80%" }}
+            height={500}
               src={loveImage}
               alt=""
             />

@@ -21,7 +21,7 @@ export default function MainCard() {
       >
         <Grid
           item
-          lg={7}
+          lg={6}
           xs={11}
           spacing={2}
           sx={{
@@ -33,7 +33,7 @@ export default function MainCard() {
         >
           <Card sx={{ maxWidth: "auto" , boxShadow:"none", borderRadius: "10px"}}>
             <CardActionArea sx={{ display: "flex", padding: "1rem",borderRadius: "10px" }}>
-              <Image src={logo} height={150} alt="" />
+              <Image src={logo} height={130} alt="" />
               <CardContent>
                 <Typography
                   gutterBottom
