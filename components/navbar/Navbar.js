@@ -22,10 +22,11 @@ import Link from "next/link";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  borderRadius: "20px",
+  backgroundColor: alpha(theme.palette.common.white, 1),
+  color: alpha(theme.palette.common.black, 1),
   "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.white, 1),
   },
   marginLeft: 0,
   width: "100%",
@@ -148,7 +149,7 @@ function Navbar({ ColorModeContext }) {
             >
               <Search>
                 <SearchIconWrapper>
-                  <SearchIcon />
+                  <SearchIcon style={{color: "gray"}}/>
                 </SearchIconWrapper>
                 <StyledInputBase
                   placeholder="Search…"
@@ -173,12 +174,12 @@ function Navbar({ ColorModeContext }) {
                 )}
               </IconButton>
             </Box>
-            <Box sx={{ flexGrow: 0, display: { xs: "block", md: "flex" } }}>
-              <Divider
+              {/* <Divider
                 orientation="vertical"
                 flexItem
                 // sx={{ color: "inherit" }}
-              />
+              /> */}
+            <Box sx={{ flexGrow: 0, display: { xs: "block", md: "flex" } }}>
             </Box>
 
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
@@ -199,7 +200,7 @@ function Navbar({ ColorModeContext }) {
                 sx={{ p: 2 }}
               >
                 <GitHubIcon />
-              </IconButton>
+              </IconButton >
               <IconButton
                 size=""
                 edge="start"

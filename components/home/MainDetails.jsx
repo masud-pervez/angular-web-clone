@@ -56,6 +56,7 @@ export default function MainDetails() {
               sx={{ fontSize: "17px", lineHeight: "30px" }}
               component="h6"
               color="dark"
+              marginTop={3}
             >
               Achieve the maximum speed possible on the Web Platform today, and
               take it further, via Web Workers and server-side rendering.
@@ -65,6 +66,7 @@ export default function MainDetails() {
               sx={{ fontSize: "17px", lineHeight: "30px" }}
               component="h6"
               color="dark"
+              marginTop={2}
             >
               Angular puts you in control over scalability. Meet huge data
               requirements by building data models on RxJS, Immutable.js or
@@ -91,7 +93,7 @@ export default function MainDetails() {
             <Image height={600}  src={toolingImge} alt="" />
           </Grid>
           <Grid item lg={5} xs={10}>
-            <Typography variant="h5" component="h6" color="primary">
+            <Typography variant="h5"  component="h6" color="primary">
               DEVELOP ACROSS ALL PLATFORMS
             </Typography>
             <Typography
@@ -99,6 +101,7 @@ export default function MainDetails() {
               sx={{ fontSize: "17px", lineHeight: "30px" }}
               component="h6"
               color="dark"
+              marginTop={3}
             >
               Achieve the maximum speed possible on the Web Platform today, and
               take it further, via Web Workers and server-side rendering.
@@ -108,6 +111,7 @@ export default function MainDetails() {
               sx={{ fontSize: "17px", lineHeight: "30px" }}
               component="h6"
               color="dark"
+              marginTop={3}
             >
               Angular puts you in control over scalability. Meet huge data
               requirements by building data models on RxJS, Immutable.js or
@@ -136,6 +140,7 @@ export default function MainDetails() {
               sx={{ fontSize: "17px", lineHeight: "30px" }}
               component="h6"
               color="dark"
+              marginTop={3}
             >
               Achieve the maximum speed possible on the Web Platform today, and
               take it further, via Web Workers and server-side rendering.
@@ -145,6 +150,7 @@ export default function MainDetails() {
               sx={{ fontSize: "17px", lineHeight: "30px" }}
               component="h6"
               color="dark"
+              marginTop={2}
             >
               Angular puts you in control over scalability. Meet huge data
               requirements by building data models on RxJS, Immutable.js or

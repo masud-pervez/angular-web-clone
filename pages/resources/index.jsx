@@ -45,7 +45,7 @@ export default function index() {
       <Grid
         item
         xs={10}
-        lg={7 }
+        lg={7}
         style={{
           display: "flex",
           justifyContent: "center",
@@ -53,7 +53,7 @@ export default function index() {
         }}
       >
         <Box
-          sx={{ width: "auto", typography: "body1", justifyContent: "center"}}
+          sx={{ width: "auto", typography: "body1", justifyContent: "center" }}
         >
           <TabContext value={value}>
             <Box>
@@ -61,7 +61,7 @@ export default function index() {
                 onChange={handleChange}
                 aria-label="lab API tabs example"
                 centered
-                sx={{border:"none"}}
+                sx={{ border: "none" }}
               >
                 <Tab label="DEVELOPMENT" value="development" />
                 <Tab label="EDUCATION" value="education" />
@@ -90,21 +90,29 @@ export default function index() {
                               <CardContent
                                 key={idx}
                                 sx={{
+                                  transition: "all 0.3s ease-out",
+                                  marginBottom: "10px",
+                                  border: "none",
+                                  borderRadius: "3px",
+                                  transform: "scale(1)",
+                                  marginX: "6px",
                                   ":hover": {
                                     boxShadow:
-                                      "2px 5px 20px 0px rgba(55,154,224,0.75)",
+                                      "2px 5px 20px 0px rgba(55,154,224,0.50)",
+                                    border: " rgba(55,154,224,0.75)",
+                                    transform: "scale(1.01)",
                                   },
-                                  transition: "all 0.3s",
-                                  marginBottom: "10px"
+                                  ":focus": {},
                                 }}
                               >
-                                <Typography variant="h6" color="text.dark" sx={{fontWeight: "bold"}}>
+                                <Typography
+                                  variant="h6"
+                                  color="text.dark"
+                                  sx={{ fontWeight: "bold" }}
+                                >
                                   {itemHeading}
                                 </Typography>
-                                <Typography
-                                  variant="body2"
-                                  color="text.secondary"
-                                >
+                                <Typography variant="body2" color="text.dark">
                                   {itemDetails}
                                 </Typography>
                               </CardContent>

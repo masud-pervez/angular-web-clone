@@ -32,16 +32,25 @@ export default function Mainhero() {
               color="white"
               variant="h5"
               component="h3"
-              sx={{ fontSize: { md: "60px" } }}
+              sx={{ fontSize: { md: "50px" } }}
             >
               {"The modern web developer's platform"}
             </Typography>
             <Button
               variant="contained"
               color="inherit"
-              sx={{ my: 3, borderRadius: "30px" }}
+              sx={{
+                background: "#fff",
+                my: 3,
+                borderRadius: "30px",
+                transition: "all 0.3",
+                ":hover": {
+                  textDecoration: "underline",
+                  background: "#EAF3FB"
+                },
+              }}
             >
-              <Typography color="primary" variant="p" component="p">
+              <Typography color="primary" variant="h6" component="a" sx={{padding: "3px 15px",}}>
                 GET STARTED
               </Typography>
             </Button>

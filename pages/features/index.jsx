@@ -68,7 +68,7 @@ export default function Features() {
                     </Typography>
                     <Typography
                       variant="p"
-                      color={"gray"}
+                      color={"#444"}
                       component="p"
                       lineHeight={2}
                     >
@@ -95,9 +95,11 @@ export default function Features() {
                 width: "200px",
                 transform: "scale(0.9)",
                 borderRadius: "50px",
+                fontSize: "16px",
                 ":hover":{
                   transform: "scale(1)",
-                  transition: "1s"
+                  transition: "all .2s ease-in-out",
+                  textDecoration: "underline"
                 }
               }}
               variant="contained"
