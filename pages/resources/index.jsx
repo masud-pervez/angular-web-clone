@@ -76,7 +76,6 @@ export default function index() {
                   <Card sx={{ maxWidth: "100%" }}>
                     {resourceitems.map((resource, idx) => {
                       const { itemTitle, items } = resource;
-                      console.log(itemTitle);
                       return (
                         <Box key={idx}>
                           <CardHeader

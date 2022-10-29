@@ -8,13 +8,13 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import logo from "../../assets/code-icon.svg";
+// import logo from "../../assets/code-icon.svg";
 
 export default function MainCard() {
   return (
     <Container>
       <Grid
-        container="xl"
+        container
         alignItems="start"
         marginY="5%"
         justifyContent="center"
@@ -23,7 +23,6 @@ export default function MainCard() {
           item
           lg={6}
           xs={11}
-          spacing={2}
           sx={{
             boxShadow: "8px 12px 40px -19px rgba(0, 0, 0, 0.52)",
             ":hover": {
@@ -33,7 +32,7 @@ export default function MainCard() {
         >
           <Card sx={{ maxWidth: "auto" , boxShadow:"none", borderRadius: "10px"}}>
             <CardActionArea sx={{ display: "flex", padding: "1rem",borderRadius: "10px" }}>
-              <Image src={logo} height={130} alt="" />
+              <Image src="/code-icon.svg" height={130} width={100} alt="" />
               <CardContent>
                 <Typography
                   gutterBottom

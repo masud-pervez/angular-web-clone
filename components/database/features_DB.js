@@ -1,4 +1,4 @@
-import logo from "../../assets/feature-icon.svg";
+const logo = "/feature-icon.svg";
 
 const featuresDb = [
   {

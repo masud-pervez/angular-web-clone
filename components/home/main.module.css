@@ -30,10 +30,22 @@
   -moz-box-shadow: 8px 12px 40px -19px rgba(0, 0, 0, 0.52);
 }
 
+.heading {
+  font-size: 2.9rem;
+  color: #fff;
+}
 
-@media only screen and (max-width: 600px){
+
+@media only screen and (max-width: 650px) {
   .hero {
     -webkit-transform: skewY(0deg);
     transform: skewY(0deg);
+  }
+  .heading {
+    font-size: 2.1rem;
+    text-align: center;
+  }
+  .button{
+    text-align: center;
   }
 }

@@ -1,105 +1,83 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import logo from "../../assets/logo-nav@2x.png";
-import SearchIcon from "@mui/icons-material/Search";
-import { styled, alpha } from "@mui/material/styles";
-import { Divider, IconButton, InputBase } from "@mui/material";
+import {useContext, useState}  from "react";
+import {
+  Divider,
+  IconButton,
+  AppBar,
+  Box,
+  Toolbar,
+  Container,
+  Button,
+} from "@mui/material";
+
+import Link from "next/link";
+import Image from "next/image";
 import { useTheme } from "@mui/material/styles";
+import { useRouter } from "next/router";
+import { Search , SearchIconWrapper , StyledInputBase} from "./Search";
+import  pages from "./pages"
 // icons
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import SearchIcon from "@mui/icons-material/Search";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import LightModeIcon from "@mui/icons-material/LightMode";
-
-import Image from "next/image";
-import { useRouter } from "next/router";
-import Link from "next/link";
-
-const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: "20px",
-  backgroundColor: alpha(theme.palette.common.white, 1),
-  color: alpha(theme.palette.common.black, 1),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 1),
-  },
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(1),
-    width: "auto",
-  },
-}));
-
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      width: "12ch",
-      "&:focus": {
-        width: "15ch",
-      },
-    },
-  },
-}));
-
-const pages = [
-  {
-    id: 1,
-    name: "FEATURES",
-    path: "/features",
-  },
-  {
-    id: 3,
-    name: "RESOURCES",
-    path: "/resources",
-  },
-];
+import Drawer from "./Drawer";
 
 function Navbar({ ColorModeContext }) {
+  const [toggle, setToggle] = useState(true) 
+
   const router = useRouter();
   const theme = useTheme();
   const { pathname } = router;
-  const colorMode = React.useContext(ColorModeContext);
+  const colorMode = useContext(ColorModeContext);
 
+  const appbar = {
+    backgroundColor: `${pathname === "/" ? "transparent" : "#1976d2"}`,
+    boxShadow: `${pathname === "/" && "none"}`,
+    position: "none",
+  };
+
+  const handleClick = () => {
+    setToggle(!toggle);
+    console.log(toggle);
+    
+  }
   return (
     <nav>
-      <AppBar
-        position={`${pathname === "/" ? "static" : "fixed"}`}
-        sx={{
-          backgroundColor: `${pathname === "/" ? "transparent" : "#1976d2"}`,
-          boxShadow: `${pathname === "/" && "none"}`,
-          position: "none",
-        }}
-      >
+      <AppBar position={`${pathname === "/" ? "static" : "fixed"}`} sx={appbar}>
         <Container maxWidth="xxl">
           <Toolbar disableGutters>
-            <Box sx={{ flexGrow: 0, display: { xs: "block", md: "flex" } }}>
+            
+            <Box sx={{ flexGrow: 0, display: { xs: "block", md: "none" } }}>
+              <Button
+                color="inherit"
+                aria-label="menu"
+                variant="center"
+                onClick={handleClick}
+              >
+                
+                <Drawer />
+              </Button>
+            </Box>
+
+            <Box sx={{ flexGrow: 0, display: { xs: "block", md: "none" } }}>
+              <Link href="/">
+                <Image
+                  width={50}
+                  height={40}
+                  src={"/shield-large.svg"}
+                  style={{ cursor: "pointer" }}
+                  alt="logo"
+                />
+              </Link>
+            </Box>
+            <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
               <Link href="/">
                 <Image
                   width={170}
                   height={40}
-                  src={logo}
+                  src={"/logo-nav@2x.png"}
                   style={{ cursor: "pointer" }}
                   alt="logo"
                 />
@@ -149,7 +127,7 @@ function Navbar({ ColorModeContext }) {
             >
               <Search>
                 <SearchIconWrapper>
-                  <SearchIcon style={{color: "gray"}}/>
+                  <SearchIcon style={{ color: "gray" }} />
                 </SearchIconWrapper>
                 <StyledInputBase
                   placeholder="Search…"
@@ -174,12 +152,8 @@ function Navbar({ ColorModeContext }) {
                 )}
               </IconButton>
             </Box>
-              {/* <Divider
-                orientation="vertical"
-                flexItem
-                // sx={{ color: "inherit" }}
-              /> */}
-            <Box sx={{ flexGrow: 0, display: { xs: "block", md: "flex" } }}>
+            <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}style={{backgroundColor: 'red'}}>
+              <Divider orientation="vertical" flexItem  />
             </Box>
 
             <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
@@ -200,7 +174,7 @@ function Navbar({ ColorModeContext }) {
                 sx={{ p: 2 }}
               >
                 <GitHubIcon />
-              </IconButton >
+              </IconButton>
               <IconButton
                 size=""
                 edge="start"

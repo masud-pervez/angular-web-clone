@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Container,
   Divider,
@@ -12,15 +13,9 @@ import React from "react";
 import featuresDb from "../../components/database/features_DB";
 
 export default function Features() {
-  console.log(featuresDb);
   return (
-    <div style={{ height: "auto" }}>
-      <div
-        style={{
-          backgroundColor: "#1e88e5",
-          marginTop: "64px",
-        }}
-      >
+    <Box>
+      <Box sx={{ backgroundColor: "#1e88e5"}}>
         <Typography
           variant="h5"
           component="h2"
@@ -29,7 +24,7 @@ export default function Features() {
         >
           FEATURES & BENEFITS
         </Typography>
-      </div>
+      </Box>
 
       <Container>
         {featuresDb.map((item, idx) => {
@@ -52,7 +47,7 @@ export default function Features() {
                 textAlign="center"
                 style={{ alignItems: "center" }}
               >
-                <Image height={80} src={item.image} alt="logo" />
+                <Image height={80} width={50} src={item.image} alt="logo" />
               </Typography>
 
               <Grid
@@ -90,17 +85,17 @@ export default function Features() {
         >
           <Link href="/">
             <Button
-            size="large"
-              sx={{ 
+              size="large"
+              sx={{
                 width: "200px",
                 transform: "scale(0.9)",
                 borderRadius: "50px",
                 fontSize: "16px",
-                ":hover":{
+                ":hover": {
                   transform: "scale(1)",
                   transition: "all .2s ease-in-out",
-                  textDecoration: "underline"
-                }
+                  textDecoration: "underline",
+                },
               }}
               variant="contained"
             >
@@ -109,6 +104,6 @@ export default function Features() {
           </Link>
         </div>
       </Container>
-    </div>
+    </Box>
   );
 }
